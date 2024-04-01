@@ -9,12 +9,12 @@
     - name: install apache2 package
       yum:
         name: httpd
-        state: latest
+        state: absent
 
     - name: install PHP support for Apache
       yum:
         name:
-        state: latest
+        state: absent
           -  php
           -  php-mysqlnd # Add any other PHP modules you need
 
