@@ -1,0 +1,15 @@
+{% if inventory == 'bgts-pds-node-02' %}
+DEVICE=eth0
+BOOTPROTO=static
+IPADDR=192.168.190.90
+NETMASK=255.255.240.0 
+GATEWAY=192.168.176.1 
+ONBOOT=yes
+{% elif inventory == 'bgts-pds-node-03' %}
+DEVICE=eth0
+BOOTPROTO=static
+IPADDR=192.168.178.53
+NETMASK=255.255.240.0 
+GATEWAY=192.168.176.1 
+ONBOOT=yes
+{% endif %}
