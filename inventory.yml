@@ -1,4 +1,12 @@
-bgts-pds-node-01 192.168.190.160
-bgts-pds-node-02 192.168.190.90
-bgts-pds-node-03 192.168.178.53
+all:
+  hosts:
+    host1:
+      ansible_host: 192.168.190.160
+    host2:
+      ansible_host: 192.168.190.90
+    host3:
+      ansible_host: 192.168.178.53
+  children:
+    ungrouped: {}
+
 
