@@ -1,0 +1,14 @@
+---
+
+- name: Enable repository
+  hosts: all
+  become: yes
+  tasks:
+
+    - name: Enable repository in redhat.repo
+     
+      lineinfile:
+        
+        path: /etc/yum.repos.d/redhat.repo
+        regexp: '^enabled='
+        line: 'enabled=1'
