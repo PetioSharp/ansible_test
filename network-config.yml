@@ -5,7 +5,7 @@
   tasks:
     - name: Set network configuration
       template:
-        src: templates/network-config.j2
+        src: inventory.yml
         dest: "/etc/sysconfig/network-scripts/ifcfg-eth0"
       vars:
         ip_address: "{{ ip_address }}"
