@@ -10,5 +10,12 @@
       lineinfile:
         
         path: /etc/yum.repos.d/redhat.repo
-        regexp: '^enabled='
-        line: 'enabled=1'
+        regexp: '^(enabled\s*=\s*)0$'
+        line: '\11'
+      notify: Update package cache
+
+
+    - name: Updaye package cache
+      command: yum makecache
+      ignore_errors: true
+     
